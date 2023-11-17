@@ -33,11 +33,11 @@ INSERT INTO estoque (id_produto, quantidade) VALUES
     (4, 7);
 
 
-CREATE VIEW estoque_agora AS
+CREATE VIEW estoque_critico AS
 SELECT p.nome, e.quantidade
 FROM produtos p
 INNER JOIN estoque e ON p.id_produto = e.id_produto
 WHERE e.quantidade < 5; 
 
 
-SELECT * FROM estoque_agora;
+SELECT * FROM estoque_critico;
